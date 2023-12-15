@@ -3,18 +3,16 @@ import { View } from "react-native";
 import defaultStyles from './styles';
 import ChatBar from "../ChatBar/ChatBar";
 import ChatBoard from "../ChatBoard/ChatBoard";
-import ChatControlPanel from "../ChatControllPanel/ChatControllPanel";
 import { Message } from "../Message/Message";
 import { User } from "../Message/user";
-import { useState } from "react";
 
 function Chat() {
   const styles = defaultStyles();
 
   const users: User[] = [
-    { id: '1', fistName: 'John', lastName: 'Snow' },
-    { id: '2', fistName: 'Tom', lastName: 'Crus' },
-    { id: '3', fistName: 'Bob', lastName: 'Markus' }
+    { id: '1', fistName: 'Ferdinand', lastName: 'Ceil' },
+    { id: '2', fistName: 'Francis', lastName: 'Crus' },
+    { id: '3', fistName: 'Frank', lastName: 'Markus' }
   ];
 
   const messageStart: Message = { id: '1', text: 'Let do this', from: users[0] };
@@ -29,21 +27,8 @@ function Chat() {
     { id: '6', text: 'Yep, I got It', from: users[0], sourceReply: twoMessageStart  },
   ];
 
-  const [messages, setMessages] = useState<Message[]>(initialMessages);
+  const messages = initialMessages;
 
-  const handleAddMessage = (text: string): void => {
-    const id = messages.length + 1;
-    const user = users[2];
-
-    const message: Message = {
-      id: id.toString(),
-      text: text,
-      from: user,
-    };
-
-    const newMessages = [...messages, message];
-    setMessages(newMessages);
-  };
 
   return (
     <>
@@ -52,7 +37,6 @@ function Chat() {
         <View style={styles.board}>
           <ChatBoard messages={messages} userId={'3'} />
         </View>
-        <ChatControlPanel onAddMessage={handleAddMessage} />
       </View>
     </>
   );

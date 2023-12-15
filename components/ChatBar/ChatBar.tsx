@@ -1,7 +1,6 @@
 import { Text, View } from "react-native";
 
 import defaultStyles from './styles';
-import BackButton from "../BackButton/BackButton";
 import IconButton from "../IconButton/IconButton";
 
 function ChatBar() {
@@ -11,10 +10,6 @@ function ChatBar() {
     <>
       <View style={style.root}>
         <View>
-          <BackButton
-            iconName={'chevron-left'}
-            label={'back'}
-          />
         </View>
         <View style={style.mainSection}>
           <Text style={style.title}>

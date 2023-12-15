@@ -54,7 +54,7 @@ export default ({ isMyMessage }: { isMyMessage: boolean}): ChatMessageStyle => {
     },
     textContainer: {
       padding: 10,
-      backgroundColor: '#4f7942',
+      backgroundColor: '#808080',
       borderRadius: 15,
     },
     text: {
