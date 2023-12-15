@@ -3,6 +3,7 @@ import { View } from "react-native";
 import defaultStyles from './styles';
 import ChatBar from "../ChatBar/ChatBar";
 import ChatBoard from "../ChatBoard/ChatBoard";
+import ChatInput from "../ChatInput/ChatInput";
 import { Message } from "../Message/Message";
 import { User } from "../Message/user";
 
@@ -37,6 +38,7 @@ function Chat() {
         <View style={styles.board}>
           <ChatBoard messages={messages} userId={'3'} />
         </View>
+        <ChatInput />
       </View>
     </>
   );

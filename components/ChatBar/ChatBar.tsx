@@ -1,7 +1,6 @@
 import { Text, View } from "react-native";
 
 import defaultStyles from './styles';
-import IconButton from "../IconButton/IconButton";
 
 function ChatBar() {
   const style = defaultStyles();
@@ -17,10 +16,6 @@ function ChatBar() {
           </Text>
         </View>
         <View>
-          <IconButton
-            name={'settings'}
-            size={30}
-          />
         </View>
       </View>
     </>
